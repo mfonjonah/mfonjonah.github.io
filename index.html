@@ -646,6 +646,100 @@
   .contact-divider::before { left: 0; }
   .contact-divider::after { right: 0; }
 
+
+  /* Testimonial section */
+  #testimonials { background: var(--cream); }
+  .testimonial-wrap {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    position: relative;
+  }
+  .testimonial-card {
+    background: var(--ink);
+    padding: 3.5rem 3.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: -1rem; left: 2rem;
+    font-family: var(--font-display);
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(196,135,58,0.12);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .testimonial-card::after {
+    content: '';
+    position: absolute;
+    bottom: -14px; right: -14px;
+    width: 100%; height: 100%;
+    border: 2px solid rgba(196,135,58,0.2);
+    z-index: -1;
+  }
+  .testimonial-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(247,243,238,0.92);
+    line-height: 1.85;
+    margin-bottom: 2.4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .testimonial-text strong {
+    color: var(--accent-light);
+    font-style: normal;
+    font-weight: 600;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border-top: 1px solid rgba(196,135,58,0.2);
+    padding-top: 1.6rem;
+  }
+  .author-avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: rgba(196,135,58,0.15);
+    border: 2px solid rgba(196,135,58,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .author-info { display: flex; flex-direction: column; gap: 0.2rem; }
+  .author-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .author-role {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .testimonial-badge {
+    position: absolute;
+    top: 2rem; right: 2rem;
+    padding: 0.35rem 0.9rem;
+    background: rgba(196,135,58,0.15);
+    border: 1px solid rgba(196,135,58,0.3);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+  }
+
 </style>
 </head>
 <body>
@@ -657,6 +751,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#casestudies">Work</a></li>
+    <li><a href="#testimonials">Testimonial</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1188,6 +1283,31 @@
   </div>
   </div><!-- /cs07 -->
 
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-label">Client Testimonial</div>
+  <h2>What Clients Say<br>About <em>Working With Me</em></h2>
+  <div class="testimonial-wrap">
+    <div class="testimonial-card">
+      <div class="testimonial-badge">✦ Verified Client</div>
+      <p class="testimonial-text">
+        "Before you started working on the account, we didn't have time to properly handle LinkedIn engagement, submit proposals, or do outreach to ideal clients. We were looking for someone competent who could take ownership of those tasks.
+        <br/><br/>
+        After you started working with us, <strong>you really followed the company SOP and helped us meet our goals.</strong> We've seen a reasonable increase in both impressions and engagement, and the account has grown very well.
+        <br/><br/>
+        <strong>I would recommend you to anyone looking to hire</strong> because you are always willing to do more than what is expected from the role. Thank you for supporting me on this project."
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar">C</div>
+        <div class="author-info">
+          <span class="author-name">Confidential Client</span>
+          <span class="author-role">US-Based Professional · LinkedIn Account Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
